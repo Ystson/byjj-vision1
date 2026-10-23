@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(rm_vision)
+set(CMAKE_CXX_STANDARD 14)
+set(OpenCV_DIR "/usr/local/opencv4.5.4/lib/cmake/opencv4")
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(rm_vision_node main.cpp)
+target_link_libraries(rm_vision_node ${OpenCV_LIBS})
